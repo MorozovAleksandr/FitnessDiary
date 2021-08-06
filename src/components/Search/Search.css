@@ -1,0 +1,38 @@
+.Search {
+    width: 100%;
+    max-width: 368px;
+    height: 40px;
+    position: relative;
+}
+
+.Search__input {
+    border: 1px solid #AFAFAF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 36px 12px 20px;
+    height: 100%;
+    width: 100%;
+    color: #AFAFAF;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.Search__input::placeholder {
+    font-size: 14px;
+    line-height: 16px;
+    color: #AFAFAF;
+}
+
+.Search__input:focus-visible {
+    outline: none;
+}
+
+.Search__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    right: 20px;
+}

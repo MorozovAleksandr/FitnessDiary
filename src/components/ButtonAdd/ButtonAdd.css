@@ -1,0 +1,34 @@
+.ButtonAdd {
+    width: 200px;
+    position: relative;
+    padding: 12px 20px;
+    border: 1px solid #819AEF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ButtonAdd span {
+    font-size: 14px;
+    line-height: 18px;
+
+    text-align: center;
+
+    color: #819AEF;
+}
+
+.ButtonAdd .button__icon {
+    font-size: 21px;
+    margin-top: -4px;
+}
+
+.ButtonAdd:hover {
+    background: #819AEF;
+}
+
+.ButtonAdd:hover span {
+    color: #FFFFFF;
+}

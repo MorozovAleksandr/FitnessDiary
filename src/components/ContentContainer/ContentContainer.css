@@ -1,0 +1,11 @@
+.ContentContainer {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    padding: 20px 30px 30px 30px;
+    background-color: #eff3ff;
+}
+
+.ContentContainer__top {
+    display: flex;
+    justify-content: space-between;
+}

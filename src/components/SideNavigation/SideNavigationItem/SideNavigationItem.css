@@ -1,0 +1,31 @@
+.SideNavigationItem {
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+
+.SideNavigationItem:hover {
+    background: #819AEF;
+    box-shadow: 0px -2px 6px rgba(72, 86, 135, 0.2), 0px 2px 6px rgba(72, 86, 135, 0.2);
+    color: white;
+}
+
+.SideNavigationItem:hover .SideNavigationItem__logo {
+    fill: white;
+}
+
+.SideNavigationItem:hover svg {
+    fill: white;
+}
+
+.SideNavigationItem__logo {
+    margin-left: 30px;
+}
+
+.SideNavigationItem__title {
+    margin-left: 30px;
+    color: black;
+}

@@ -1,0 +1,16 @@
+.SideNavigation {
+    background: #EFF3FF;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.SideNavigation__logo {
+    padding-top: 14px;
+    padding-left: 25px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #DBE2FF;
+}
+
+.SideNavigation__menu_margin {
+    margin-top: 20px;
+}
