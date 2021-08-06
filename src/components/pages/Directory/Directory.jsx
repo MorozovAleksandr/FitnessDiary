@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import PageTitle from '../../PageTitle/PageTitle';
+import EmptyPage from '../../EmptyPage/EmptyPage'
 
 const Directory = () => {
     return (
         <Fragment>
-            <PageTitle title="Справочник" />
+            <EmptyPage title="Справочник" text="Справочник пуст :(" link="/" />
         </Fragment>
     )
 }

@@ -10,6 +10,10 @@
 .SideNavigationItem:hover {
     background: #819AEF;
     box-shadow: 0px -2px 6px rgba(72, 86, 135, 0.2), 0px 2px 6px rgba(72, 86, 135, 0.2);
+    color: white !important;
+}
+
+.SideNavigationItem:hover .SideNavigationItem__title {
     color: white;
 }
 

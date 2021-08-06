@@ -12,16 +12,14 @@ import store from './store';
 const fitnessDiaryService = new FitnessDiaryService();
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <ErrorBoundry>
-                <FitnessDiaryServiceProvider value={fitnessDiaryService}>
-                    <BrowserRouter>
-                        <App />
-                    </BrowserRouter>
-                </FitnessDiaryServiceProvider>
-            </ErrorBoundry>
-        </Provider>
-    </React.StrictMode>,
+    <Provider store={store}>
+        <ErrorBoundry>
+            <FitnessDiaryServiceProvider value={fitnessDiaryService}>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </FitnessDiaryServiceProvider>
+        </ErrorBoundry>
+    </Provider>,
     document.getElementById('root')
 );
