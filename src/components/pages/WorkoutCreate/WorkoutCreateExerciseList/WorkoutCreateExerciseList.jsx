@@ -1,15 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import WorkoutCreateExerciseListItem from './WorkoutCreateExerciseListItem/WorkoutCreateExerciseListItem';
 import './WorkoutCreateExerciseList.css';
 import { connect } from 'react-redux';
 
-const WorkoutCreateExerciseList = ({ workoutCreateMuscleList, activeItem }) => {
-
+const WorkoutCreateExerciseList = ({ workoutCreateExerciseList }) => {
     let renderExerciseList = null;
-    if (activeItem !== null) {
-        const ExerciseList = workoutCreateMuscleList.find((item) => item.id === activeItem);
-        renderExerciseList = ExerciseList.exercise.map(item => {
+    if (workoutCreateExerciseList.length) {
+        renderExerciseList = workoutCreateExerciseList.map(item => {
             return <WorkoutCreateExerciseListItem key={item.id} title={item.title} details={item.details} />
         })
     }
@@ -25,10 +24,18 @@ const WorkoutCreateExerciseList = ({ workoutCreateMuscleList, activeItem }) => {
     );
 };
 
-const mapStateToProps = ({ workoutCreate: { workoutCreateMuscleList }, workoutCreateMuscleList: { activeItem } }) => {
+WorkoutCreateExerciseList.propTypes = {
+    workoutCreateExerciseList: PropTypes.arrayOf(PropTypes.shape({
+        details: PropTypes.string,
+        id: PropTypes.id,
+        title: PropTypes.string
+    }))
+}
+
+
+const mapStateToProps = ({ workoutCreate: { workoutCreateExerciseList } }) => {
     return {
-        workoutCreateMuscleList,
-        activeItem
+        workoutCreateExerciseList
     }
 }
 

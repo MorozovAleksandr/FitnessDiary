@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ButtonAdd.css';
 
 const ButtonAdd = ({ text }) => {
@@ -12,6 +13,10 @@ const ButtonAdd = ({ text }) => {
             </span>
         </button>
     )
+}
+
+ButtonAdd.propTypes = {
+    text: PropTypes.string.isRequired
 }
 
 export default ButtonAdd;

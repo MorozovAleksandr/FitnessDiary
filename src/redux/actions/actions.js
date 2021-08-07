@@ -1,43 +1,43 @@
-const workoutCreatePageRequested = () => {
+const workoutCreatePageRequestedAC = () => {
     return {
         type: 'FETCH_CREATE_WORKOUT_LIST_REQUEST'
     };
 };
 
-const workoutCreatePageLoaded = (newWorkoutCreatePage) => {
+const workoutCreatePageLoadedAC = (newWorkoutCreatePage) => {
     return {
         type: 'FETCH_CREATE_WORKOUT_LIST_SUCCESS',
         payload: newWorkoutCreatePage
     };
 };
 
-const workoutCreatePageError = (error) => {
+const workoutCreatePageErrorAC = (error) => {
     return {
         type: 'FETCH_CREATE_WORKOUT_LIST_FAILURE',
         payload: error
     };
 };
 
-const onClickWorkoutListItem = (id) => {
+const onClickWorkoutListItemAC = (exerciseList) => {
     return {
         type: 'CLICK_MUSCLE_ITEM',
-        payload: id
+        payload: exerciseList
     }
 }
 
 
 const fetchWorkoutCreatePage = (fitnessDiaryService, dispatch) => () => {
-    dispatch(workoutCreatePageRequested());
+    dispatch(workoutCreatePageRequestedAC());
     fitnessDiaryService.getMuscleGroup()
         .then((data) => {
-            dispatch(workoutCreatePageLoaded(data));
+            dispatch(workoutCreatePageLoadedAC(data));
         })
         .catch((err) => {
-            dispatch(workoutCreatePageError(err));
+            dispatch(workoutCreatePageErrorAC(err));
         });
 };
 
 export {
     fetchWorkoutCreatePage,
-    onClickWorkoutListItem
+    onClickWorkoutListItemAC
 }

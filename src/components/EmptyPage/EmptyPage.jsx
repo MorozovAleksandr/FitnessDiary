@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import PageTitle from '../PageTitle/PageTitle';
 import { Link } from 'react-router-dom';
 import './EmptyPage.css'
@@ -16,6 +17,12 @@ const EmptyPage = ({ title, text, link }) => {
             </div>
         </Fragment>
     )
+}
+
+EmptyPage.propTypes = {
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
 }
 
 export default EmptyPage;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -44,5 +45,10 @@ const WorkoutCreateExerciseListItem = ({ title, details }) => {
         </Accordion>
     );
 };
+
+WorkoutCreateExerciseListItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired
+}
 
 export default WorkoutCreateExerciseListItem;

@@ -6,8 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './components/App/App';
 import ErrorBoundry from './components/ErrorBoundry/ErrorBoundry';
 import FitnessDiaryService from './services/fitnessdiary-services';
-import { FitnessDiaryServiceProvider } from './components/FitnessDiaryServiceContext/FitnessDiaryServiceContext';
-import store from './store';
+import { FitnessDiaryServiceProvider } from './services/FitnessDiaryServiceContext/FitnessDiaryServiceContext';
+import store from './redux/store';
 
 const fitnessDiaryService = new FitnessDiaryService();
 

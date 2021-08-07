@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchWorkoutCreatePage } from '../../../actions/actions';
+import { fetchWorkoutCreatePage } from '../../../redux/actions/actions';
 import withFitnessDiaryService from '../../hoc/withFitnessDiaryService';
 import PageTitle from '../../PageTitle/PageTitle';
 import './WorkoutCreate.css';
@@ -9,6 +10,10 @@ import WorkoutCreateMuscleList from './WorkoutCreateMuscleList/WorkoutCreateMusc
 
 
 class WorkoutCreate extends React.Component {
+
+    static propTypes = {
+        fetchWorkoutCreatePage: PropTypes.func.isRequired
+    }
 
     componentDidMount() {
         const { fetchWorkoutCreatePage } = this.props;

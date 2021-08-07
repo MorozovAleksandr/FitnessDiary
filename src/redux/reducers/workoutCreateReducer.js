@@ -31,6 +31,11 @@ const updateWorkoutCreatePage = (state, action) => {
                 error: action.payload,
                 workoutCreateExerciseList: []
             }
+        case 'CLICK_MUSCLE_ITEM':
+            return {
+                ...state.workoutCreate,
+                workoutCreateExerciseList: action.payload
+            }
         default:
             return state.workoutCreate
     }
