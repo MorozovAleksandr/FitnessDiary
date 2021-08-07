@@ -8,13 +8,12 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 import './WorkoutCreateExerciseListItem.css'
 
-const WorkoutCreateExerciseListItem = () => {
+const WorkoutCreateExerciseListItem = ({ title, details }) => {
 
     const [checked, setChecked] = React.useState(true);
 
     const handleChange = (event) => {
         event.stopPropagation();
-        console.log(checked);
         setChecked(event.target.checked);
     };
 
@@ -34,13 +33,12 @@ const WorkoutCreateExerciseListItem = () => {
                         inputProps={{ 'aria-label': 'secondary checkbox' }}
                     />}
                 />
-                <Typography className="WorkoutCreateExerciseListItem__name">Шраги стоя с гантелями</Typography>
+                <Typography className="WorkoutCreateExerciseListItem__name">{title}</Typography>
             </AccordionSummary>
 
             <AccordionDetails className="WorkoutCreateExerciseListItem__details">
                 <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget.
+                    {details}
                 </Typography>
             </AccordionDetails>
         </Accordion>

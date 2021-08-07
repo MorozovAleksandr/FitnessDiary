@@ -1,0 +1,6 @@
+.WorkoutCreateMuscleList {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-rows: repeat(auto-fill, 87px);
+
+}
