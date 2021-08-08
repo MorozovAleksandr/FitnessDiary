@@ -1,0 +1,29 @@
+.ButtonSave {
+    width: 200px;
+    position: relative;
+    padding: 12px 20px;
+    border: 1px solid #819AEF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonSave span {
+    font-size: 16px;
+    line-height: 18px;
+
+    text-align: center;
+
+    color: #819AEF;
+}
+
+.ButtonSave:hover {
+    background: #819AEF;
+}
+
+.ButtonSave:hover span {
+    color: #FFFFFF;
+}

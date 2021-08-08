@@ -1,0 +1,33 @@
+.PopupForDataItem_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.PopupForDataItem__text {
+    margin-left: 20px;
+}
+
+.PopupForDataItem__label {
+    width: 200px;
+    height: 40px;
+
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(129, 154, 239, 0.5);
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: rgba(53, 53, 53, 0.5);
+}
+
+.PopupForDataItem__label:focus {
+    outline: none;
+    border: 1px solid #819AEF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #353535;
+}

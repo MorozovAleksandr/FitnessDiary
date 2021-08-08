@@ -25,6 +25,35 @@ const onClickWorkoutListItemAC = (exerciseList) => {
     }
 }
 
+const toggleExerciseItemCheckboxAC = (exerciseItemId) => {
+    return {
+        type: 'TOGGLE_EXERCISE_ITEM_CHECKBOX',
+        payload: exerciseItemId
+    }
+}
+
+const toggleExerciseItemAC = (exerciseItemId) => {
+    return {
+        type: 'TOGGLE_EXERCISE_ITEM',
+        payload: exerciseItemId
+    }
+}
+
+const showFormExerciseParametersAC = (showStatus, exerciseItemId) => {
+    return {
+        type: 'SHOW_FORM_EXERCISE_PARAMETERS',
+        payload: showStatus,
+        id: exerciseItemId
+    }
+}
+
+const saveFormExerciseParametersAC = (exerciseItemId, exerciseParameters) => {
+    return {
+        type: 'SAVE_FORM_EXERCISE_PARAMETERS',
+        payload: exerciseItemId,
+        parameters: exerciseParameters
+    }
+}
 
 const fetchWorkoutCreatePage = (fitnessDiaryService, dispatch) => () => {
     dispatch(workoutCreatePageRequestedAC());
@@ -39,5 +68,9 @@ const fetchWorkoutCreatePage = (fitnessDiaryService, dispatch) => () => {
 
 export {
     fetchWorkoutCreatePage,
-    onClickWorkoutListItemAC
+    onClickWorkoutListItemAC,
+    toggleExerciseItemCheckboxAC,
+    toggleExerciseItemAC,
+    showFormExerciseParametersAC,
+    saveFormExerciseParametersAC
 }

@@ -3,7 +3,6 @@ import Header from '../Header/Header';
 import SideNavigation from '../SideNavigation/SideNavigation';
 import ContentContainer from '../ContentContainer/ContentContainer';
 import Footer from '../Footer/Footer';
-
 function App() {
     return (
         <div className="App">

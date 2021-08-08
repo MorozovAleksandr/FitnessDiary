@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import WorkoutCreateExerciseListItem from './WorkoutCreateExerciseListItem/WorkoutCreateExerciseListItem';
 import './WorkoutCreateExerciseList.css';
-import { connect } from 'react-redux';
 
-const WorkoutCreateExerciseList = ({ workoutCreateExerciseList }) => {
+const WorkoutCreateExerciseList = ({ workoutCreateExerciseList, newWorkoutCreact }) => {
     let renderExerciseList = null;
     if (workoutCreateExerciseList.length) {
         renderExerciseList = workoutCreateExerciseList.map(item => {
-            return <WorkoutCreateExerciseListItem key={item.id} title={item.title} details={item.details} />
+            const checked = newWorkoutCreact.find(item2 => item2.id === item.id) ? true : false;
+            return <WorkoutCreateExerciseListItem expand={item.expand} key={item.id} checked={checked} id={item.id} title={item.title} details={item.details} />
         })
     }
 
     if (renderExerciseList === null) {
-        return <div>Выберите группу мышц</div>
+        return null
     }
 
     return (
@@ -29,13 +30,15 @@ WorkoutCreateExerciseList.propTypes = {
         details: PropTypes.string,
         id: PropTypes.id,
         title: PropTypes.string
-    }))
+    })),
+    newWorkoutCreact: PropTypes.arrayOf(PropTypes.any).isRequired
 }
 
 
-const mapStateToProps = ({ workoutCreate: { workoutCreateExerciseList } }) => {
+const mapStateToProps = ({ workoutCreate: { workoutCreateExerciseList, newWorkoutCreact } }) => {
     return {
-        workoutCreateExerciseList
+        workoutCreateExerciseList,
+        newWorkoutCreact
     }
 }
 
