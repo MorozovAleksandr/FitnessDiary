@@ -56,10 +56,8 @@ const PopupForData = ({ showFormExerciseParametersAC, saveFormExerciseParameters
                         </div>
 
                     </div>
-                    <ButtonSave text="Сохранить" event={onSave} />
+                    <ButtonSave text="Сохранить" event={onSave} width='200px' />
                 </div>
-
-
             </div>
 
         </Dialog>

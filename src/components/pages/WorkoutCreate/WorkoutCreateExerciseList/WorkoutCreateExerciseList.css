@@ -1,3 +1,5 @@
 .WorkoutCreateExerciseList {
     margin-left: 30px;
+    display: grid;
+    grid-auto-rows: 1fr 40px;
 }

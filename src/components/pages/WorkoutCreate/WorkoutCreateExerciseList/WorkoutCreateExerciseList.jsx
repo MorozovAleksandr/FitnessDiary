@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import WorkoutCreateExerciseListItem from './WorkoutCreateExerciseListItem/WorkoutCreateExerciseListItem';
 import './WorkoutCreateExerciseList.css';
+import ButtonSave from '../../../ButtonSave/ButtonSave';
 
 const WorkoutCreateExerciseList = ({ workoutCreateExerciseList, newWorkoutCreact }) => {
     let renderExerciseList = null;
@@ -20,7 +21,10 @@ const WorkoutCreateExerciseList = ({ workoutCreateExerciseList, newWorkoutCreact
 
     return (
         <div className="WorkoutCreateExerciseList">
-            {renderExerciseList}
+            <div>
+                {renderExerciseList}
+            </div>
+            <ButtonSave text="Сохранить тренировку" event={() => { console.log('save train') }} width="100%" />
         </div>
     );
 };

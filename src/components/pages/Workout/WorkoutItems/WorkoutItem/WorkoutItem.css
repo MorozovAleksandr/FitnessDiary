@@ -1,0 +1,16 @@
+.WorkoutItem__accordionTop {
+    display: grid !important;
+    grid-template-columns: 54px 1fr;
+}
+
+.WorkoutItem__accordionTop {
+    padding: 0 !important;
+}
+
+.WorkoutItem__accordionTop .MuiAccordionSummary-expandIcon {
+    grid-row: 1;
+}
+
+.WorkoutItem__accordionTop .MuiIconButton-edgeEnd {
+    margin-right: 0 !important;
+}

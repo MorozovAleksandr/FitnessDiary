@@ -13,7 +13,7 @@ const Content = () => {
         <div className="Content">
             <Switch>
                 <Route path='/' exact component={Workout} />
-                <Route path='/workoutcreate' exact component={WorkoutCreate} />
+                <Route path='/workoutcreate' component={WorkoutCreate} />
                 <Route path='/diet' component={Diet} />
                 <Route path='/meterage' component={Meterage} />
                 <Route path='/directory' component={Directory} />
