@@ -1,5 +1,3 @@
-// Наш сервис
-
 export default class FitnessDiaryService {
 
     muscleGroup = [
